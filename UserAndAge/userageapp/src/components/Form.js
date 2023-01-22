@@ -13,7 +13,8 @@ const Form = (props) => {
         id: Math.random(),
       };
       props.addUser(user);
-    
+    setUserName('');
+    setUserAge('');
   };
   const nameFieldChange = (event) => {
     setUserName(event.target.value);
