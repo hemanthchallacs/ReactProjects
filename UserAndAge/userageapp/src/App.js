@@ -22,10 +22,10 @@ function App() {
   const [overlay, setoverlay] = useState(0);
 
   const addUserHandler = (userDetails) => {
-    if (userDetails.age < 18) {
-      setoverlay(1);
-    } else if (userDetails.username.trim().length === 0) {
+    if (userDetails.username.trim().length === 0) {
       setoverlay(2);
+    } else if (userDetails.age < 18) {
+      setoverlay(1);
     } else {
       setUserList((prevState) => {
         return [...prevState, userDetails];
